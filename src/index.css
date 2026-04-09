@@ -478,6 +478,16 @@ a:hover {
   font-family: var(--font-mono);
 }
 
+.price-sub {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
 .card-highlights {
   margin: 0;
   padding-left: 1.1rem;
@@ -490,6 +500,263 @@ a:hover {
   text-align: center;
   color: var(--text-muted);
   margin-top: 2rem;
+}
+
+.card-secondary {
+  margin-bottom: 0.5rem;
+}
+
+/* Account screenshot showcase */
+.account-showcase {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.showcase-intro {
+  margin-bottom: 2rem;
+}
+
+.showcase-heading {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+.showcase-lede {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 60ch;
+}
+
+.showcase-section {
+  margin-bottom: 2.75rem;
+}
+
+.showcase-section:last-child {
+  margin-bottom: 0;
+}
+
+.showcase-pair {
+  display: grid;
+  gap: 1.5rem 2rem;
+  margin-bottom: 2.75rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .showcase-pair {
+    grid-template-columns: 1.35fr 1fr;
+  }
+}
+
+.showcase-section--paired {
+  margin-bottom: 0;
+}
+
+.showcase-section--paired:last-child {
+  margin-bottom: 0;
+}
+
+.showcase-section-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  color: var(--cyan-dim);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.showcase-blurb {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 65ch;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .showcase-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+}
+
+.showcase-thumb {
+  display: block;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--bg-elevated);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.showcase-thumb:hover,
+.showcase-thumb:focus-visible {
+  border-color: rgba(94, 234, 255, 0.35);
+  box-shadow: 0 0 0 2px rgba(94, 234, 255, 0.12);
+  outline: none;
+}
+
+.showcase-thumb img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: block;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(4, 6, 10, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: zoom-out;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 210;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.lightbox-figure {
+  margin: 0;
+  max-width: min(520px, 100%);
+  max-height: min(92vh, 100%);
+  cursor: default;
+}
+
+.lightbox-figure img {
+  width: 100%;
+  height: auto;
+  max-height: min(85vh, 880px);
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.lightbox-figure figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  max-height: 4.5rem;
+  overflow: auto;
+}
+
+/* Account detail page */
+.account-detail-page .account-detail-head {
+  padding-top: 1.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--cyan);
+}
+
+.account-detail-summary {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  .account-detail-summary {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  }
+}
+
+.account-detail-media {
+  position: relative;
+  border-radius: calc(var(--radius) + 4px);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+}
+
+.account-detail-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.account-detail-title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  line-height: 1.2;
+}
+
+.account-detail-meta {
+  margin-bottom: 1rem;
+}
+
+.account-detail-actions {
+  margin-top: 1.25rem;
+}
+
+.account-detail-actions .btn {
+  text-decoration: none;
+}
+
+.account-detail-actions--split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.account-detail-showcase-wrap {
+  padding-top: 0;
+}
+
+.account-detail-showcase-wrap .account-showcase {
+  margin-top: 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.nav a,
+.logo {
+  text-decoration: none;
 }
 
 /* How */
@@ -566,6 +833,32 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.contact-discord {
+  margin: 0 0 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.contact-discord dt {
+  margin: 0 0 0.25rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.contact-discord dd {
+  margin: 0;
+}
+
+.contact-discord code {
+  font-size: 0.95rem;
+  color: var(--cyan-dim);
 }
 
 /* Footer */

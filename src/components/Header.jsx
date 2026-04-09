@@ -1,20 +1,22 @@
+import { Link } from 'react-router-dom'
+
 export function Header() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a className="logo" href="#top">
+        <Link className="logo" to="/">
           <span className="logo-mark" aria-hidden="true" />
           <span className="logo-text">
             Nexus<span className="logo-accent">Vault</span>
           </span>
-        </a>
+        </Link>
         <nav className="nav" aria-label="Primary">
-          <a href="#listings">Accounts</a>
-          <a href="#game">The game</a>
-          <a href="#how">How buying works</a>
-          <a className="nav-cta" href="#contact">
+          <Link to="/#listings">Accounts</Link>
+          <Link to="/#game">The game</Link>
+          <Link to="/#how">How buying works</Link>
+          <Link className="nav-cta" to="/#contact">
             Contact
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

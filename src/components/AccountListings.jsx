@@ -1,5 +1,9 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ACCOUNTS } from '../data/accounts'
+import { DISCORD_URL, DISCORD_USERNAME } from '../data/contact'
+
+const PRICE_SLIDER_MAX = 2000
 
 export function AccountListings() {
   const servers = useMemo(() => {
@@ -7,12 +11,18 @@ export function AccountListings() {
     return s
   }, [])
   const [server, setServer] = useState('all')
-  const [maxPrice, setMaxPrice] = useState(500)
+  const [maxPrice, setMaxPrice] = useState(PRICE_SLIDER_MAX)
 
   const filtered = useMemo(() => {
     return ACCOUNTS.filter((a) => {
       if (server !== 'all' && a.server !== server) return false
-      if (maxPrice < 500 && a.priceUsd > maxPrice) return false
+      if (
+        maxPrice < PRICE_SLIDER_MAX &&
+        a.priceUsd != null &&
+        a.priceUsd > maxPrice
+      ) {
+        return false
+      }
       return true
     })
   }, [server, maxPrice])
@@ -22,8 +32,8 @@ export function AccountListings() {
       <div className="section-head">
         <h2 id="listings-title">Accounts for sale</h2>
         <p>
-          Demo data wired for layout. Edit <code>src/data/accounts.js</code> with your
-          real stats, prices, and screenshot URLs.
+          Each account has its own page with screenshots and stats. Add more rows in{' '}
+          <code>src/data/accounts.js</code>.
         </p>
       </div>
 
@@ -44,13 +54,13 @@ export function AccountListings() {
           <input
             type="range"
             min="50"
-            max="500"
-            step="10"
-            value={Math.min(maxPrice, 500)}
+            max={PRICE_SLIDER_MAX}
+            step="50"
+            value={Math.min(maxPrice, PRICE_SLIDER_MAX)}
             onChange={(e) => setMaxPrice(Number(e.target.value))}
           />
           <span className="filter-value">
-            {maxPrice >= 500 ? 'Any' : `Up to $${maxPrice}`}
+            {maxPrice >= PRICE_SLIDER_MAX ? 'Any' : `Up to $${maxPrice}`}
           </span>
         </label>
       </div>
@@ -75,7 +85,12 @@ export function AccountListings() {
                 </div>
                 <div>
                   <dt>Asking</dt>
-                  <dd className="price">${acc.priceUsd}</dd>
+                  <dd className="price">
+                    {acc.priceUsd != null ? `$${acc.priceUsd}` : 'Ask'}
+                    {acc.priceNote ? (
+                      <span className="price-sub">{acc.priceNote}</span>
+                    ) : null}
+                  </dd>
                 </div>
               </dl>
               <ul className="card-highlights">
@@ -83,8 +98,16 @@ export function AccountListings() {
                   <li key={h}>{h}</li>
                 ))}
               </ul>
-              <a className="btn btn-primary btn-block" href="#contact">
-                Inquire · {acc.id}
+              <Link className="btn btn-primary btn-block" to={`/account/${acc.id}`}>
+                Open listing
+              </Link>
+              <a
+                className="btn btn-ghost btn-block card-secondary"
+                href={DISCORD_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Inquire on Discord · @{DISCORD_USERNAME}
               </a>
             </div>
           </article>

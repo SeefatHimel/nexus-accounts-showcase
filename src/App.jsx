@@ -1,25 +1,18 @@
-import { AccountListings } from './components/AccountListings'
-import { Contact } from './components/Contact'
-import { Footer } from './components/Footer'
-import { GamePitch } from './components/GamePitch'
-import { Header } from './components/Header'
-import { Hero } from './components/Hero'
-import { HowItWorks } from './components/HowItWorks'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { Layout } from './components/Layout'
+import { AccountDetailPage } from './pages/AccountDetailPage'
+import { HomePage } from './pages/HomePage'
 import './App.css'
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <GamePitch />
-        <AccountListings />
-        <HowItWorks />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/account/:accountId" element={<AccountDetailPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   )
 }
 
