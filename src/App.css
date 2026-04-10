@@ -1,7 +1,7 @@
 /* Page-specific layout hooks; tokens live in index.css */
 
 main {
-  padding-top: var(--header-h);
+  padding-top: calc(var(--header-h) + var(--notice-h));
 }
 
 code {

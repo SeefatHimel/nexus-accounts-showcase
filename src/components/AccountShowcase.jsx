@@ -53,9 +53,10 @@ export function AccountShowcase({ accountTitle, anchorId, sections }) {
   return (
     <div className="account-showcase" id={anchorId}>
       <div className="showcase-intro">
-        <h3 className="showcase-heading">Screenshot tour · {accountTitle}</h3>
+        <h3 className="showcase-heading">Screenshots · {accountTitle}</h3>
         <p className="showcase-lede">
-          Organized by area of the account. Tap an image to view it full size.
+          Shared for information only—grouped by area of the account. Tap an image to view it full
+          size.
         </p>
       </div>
 

@@ -3,41 +3,31 @@ import { Link } from 'react-router-dom'
 import { ACCOUNTS } from '../data/accounts'
 import { DISCORD_URL, DISCORD_USERNAME } from '../data/contact'
 
-const PRICE_SLIDER_MAX = 2000
-
 export function AccountListings() {
   const servers = useMemo(() => {
     const s = [...new Set(ACCOUNTS.map((a) => a.server))].sort()
     return s
   }, [])
   const [server, setServer] = useState('all')
-  const [maxPrice, setMaxPrice] = useState(PRICE_SLIDER_MAX)
 
   const filtered = useMemo(() => {
     return ACCOUNTS.filter((a) => {
       if (server !== 'all' && a.server !== server) return false
-      if (
-        maxPrice < PRICE_SLIDER_MAX &&
-        a.priceUsd != null &&
-        a.priceUsd > maxPrice
-      ) {
-        return false
-      }
       return true
     })
-  }, [server, maxPrice])
+  }, [server])
 
   return (
     <section className="section listings" id="listings" aria-labelledby="listings-title">
       <div className="section-head">
-        <h2 id="listings-title">Accounts for sale</h2>
+        <h2 id="listings-title">Account showcases</h2>
         <p>
-          Each account has its own page with screenshots and stats. Add more rows in{' '}
-          <code>src/data/accounts.js</code>.
+          Each entry is its own page of stats and screenshots—shared for information. Add more in{' '}
+          <code>src/data/accounts.js</code>. Nothing here is an official listing by the game.
         </p>
       </div>
 
-      <div className="filters" role="group" aria-label="Filter listings">
+      <div className="filters" role="group" aria-label="Filter showcases">
         <label className="filter">
           <span>Server</span>
           <select value={server} onChange={(e) => setServer(e.target.value)}>
@@ -48,20 +38,6 @@ export function AccountListings() {
               </option>
             ))}
           </select>
-        </label>
-        <label className="filter">
-          <span>Max price (USD)</span>
-          <input
-            type="range"
-            min="50"
-            max={PRICE_SLIDER_MAX}
-            step="50"
-            value={Math.min(maxPrice, PRICE_SLIDER_MAX)}
-            onChange={(e) => setMaxPrice(Number(e.target.value))}
-          />
-          <span className="filter-value">
-            {maxPrice >= PRICE_SLIDER_MAX ? 'Any' : `Up to $${maxPrice}`}
-          </span>
         </label>
       </div>
 
@@ -83,15 +59,6 @@ export function AccountListings() {
                   <dt>Power</dt>
                   <dd>{acc.power}</dd>
                 </div>
-                <div>
-                  <dt>Asking</dt>
-                  <dd className="price">
-                    {acc.priceUsd != null ? `$${acc.priceUsd}` : 'Ask'}
-                    {acc.priceNote ? (
-                      <span className="price-sub">{acc.priceNote}</span>
-                    ) : null}
-                  </dd>
-                </div>
               </dl>
               <ul className="card-highlights">
                 {acc.highlights.map((h) => (
@@ -99,7 +66,7 @@ export function AccountListings() {
                 ))}
               </ul>
               <Link className="btn btn-primary btn-block" to={`/account/${acc.id}`}>
-                Open listing
+                Open showcase
               </Link>
               <a
                 className="btn btn-ghost btn-block card-secondary"
@@ -107,7 +74,7 @@ export function AccountListings() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Inquire on Discord · @{DISCORD_USERNAME}
+                Say hi on Discord · @{DISCORD_USERNAME}
               </a>
             </div>
           </article>
@@ -115,7 +82,7 @@ export function AccountListings() {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="empty">No accounts match those filters—widen price or server.</p>
+        <p className="empty">No showcases match that server—try “All servers”.</p>
       ) : null}
     </section>
   )

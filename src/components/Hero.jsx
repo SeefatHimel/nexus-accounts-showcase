@@ -1,8 +1,5 @@
 import { HERO_IMAGE } from '../data/accounts'
 
-const PLAY_STORE =
-  'https://play.google.com/store/apps/details?id=com.nirvanagames.nexuswar'
-
 export function Hero() {
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
@@ -13,36 +10,33 @@ export function Hero() {
       />
       <div className="hero-scrim" aria-hidden="true" />
       <div className="hero-content">
-        <p className="eyebrow">Premium account sales · Nexus War: Civilization</p>
-        <h1 id="hero-title">Origin Star accounts, verified and ready to transfer</h1>
+        <p className="eyebrow">Nexus War: Civilization · player showcases</p>
+        <h1 id="hero-title">We share how our accounts look—not the publisher, just our screenshots</h1>
         <p className="hero-lede">
-          Listings for serious players: power, heroes, alliance standing, and
-          progression you can actually use in{' '}
-          <a href={PLAY_STORE} target="_blank" rel="noreferrer">
-            Nexus War: Civilization
-          </a>
-          . Swap in your own screenshots anytime—placeholders are from Unsplash for now.
+          Progression, power, research, titans, inventory—laid out for anyone curious about high-level{' '}
+          <em>Nexus War: Civilization</em> accounts. If you want to talk, use the contact links; this
+          page does not sell or transfer anything on behalf of the game.
         </p>
         <div className="hero-actions">
           <a className="btn btn-primary" href="#listings">
-            Browse accounts
+            Browse showcases
           </a>
-          <a className="btn btn-ghost" href={PLAY_STORE} target="_blank" rel="noreferrer">
-            View on Google Play
+          <a className="btn btn-ghost" href="#game">
+            About this game
           </a>
         </div>
-        <ul className="hero-stats" aria-label="Listing snapshot">
+        <ul className="hero-stats" aria-label="Site snapshot">
           <li>
-            <strong>4</strong>
-            <span>demo listings</span>
-          </li>
-          <li>
-            <strong>100%</strong>
-            <span>you control pricing copy</span>
+            <strong>1</strong>
+            <span>showcase live</span>
           </li>
           <li>
             <strong>0</strong>
-            <span>middlemen on this page</span>
+            <span>checkout on-site</span>
+          </li>
+          <li>
+            <strong>100%</strong>
+            <span>independent &amp; unofficial</span>
           </li>
         </ul>
       </div>

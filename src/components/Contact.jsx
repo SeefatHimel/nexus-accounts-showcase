@@ -6,9 +6,9 @@ export function Contact() {
       <div className="contact-panel">
         <h2 id="contact-title">Contact</h2>
         <p>
-          Message on <strong>Discord</strong>. Use the username and user ID below to confirm you have
-          the right person. Listed prices are <strong>excluding payment fees</strong> and{' '}
-          <strong>negotiable</strong> unless stated otherwise.
+          If something on this site interests you, you can message us on <strong>Discord</strong>.
+          We only talk <strong>privately</strong> there—this website does not process payments or
+          transfers. Use the username and user ID below to verify you found the right person.
         </p>
         <dl className="contact-discord">
           <div>
@@ -34,7 +34,7 @@ export function Contact() {
             Open Discord profile
           </a>
           <a className="btn btn-ghost" href="#listings">
-            Back to listings
+            Back to showcases
           </a>
         </div>
       </div>

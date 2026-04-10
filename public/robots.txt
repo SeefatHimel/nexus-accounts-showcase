@@ -1,0 +1,3 @@
+# Ask well-behaved crawlers not to index this site (pair with noindex in index.html).
+User-agent: *
+Disallow: /

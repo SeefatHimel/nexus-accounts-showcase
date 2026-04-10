@@ -143,7 +143,7 @@ const DEATH_F2P_SHOWCASE = [
 
 /*
   Add another account: copy an image folder under public/images/, build a SHOWCASE array,
-  then append { id, title, server, power, priceUsd, priceNote?, highlights, badge?, image, showcase }.
+  then append { id, title, server, power, highlights, badge?, image, showcase }.
   Listing URL: /account/<id>
 */
 
@@ -153,8 +153,6 @@ export const ACCOUNTS = [
     title: 'DeathF2P',
     server: 'S-40',
     power: '~485M',
-    priceUsd: 700,
-    priceNote: 'Excluding fees · negotiable',
     highlights: [
       'L50 Research Center · strong Battle & Armies branches',
       'Multiple IX+ marches · L60 whale-killer + upgraded Titan parts',

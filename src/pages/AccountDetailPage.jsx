@@ -17,7 +17,7 @@ export function AccountDetailPage() {
     <main className="account-detail-page">
       <div className="section account-detail-head">
         <Link className="back-link" to="/#listings">
-          ← All accounts
+          ← All showcases
         </Link>
         <div className="account-detail-summary">
           <div className="account-detail-media">
@@ -35,15 +35,6 @@ export function AccountDetailPage() {
                 <dt>Power</dt>
                 <dd>{account.power}</dd>
               </div>
-              <div>
-                <dt>Asking</dt>
-                <dd className="price">
-                  {account.priceUsd != null ? `$${account.priceUsd}` : 'Ask'}
-                  {account.priceNote ? (
-                    <span className="price-sub">{account.priceNote}</span>
-                  ) : null}
-                </dd>
-              </div>
             </dl>
             <ul className="card-highlights">
               {account.highlights.map((h) => (
@@ -57,10 +48,10 @@ export function AccountDetailPage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Message on Discord · @{DISCORD_USERNAME}
+                Discord · @{DISCORD_USERNAME}
               </a>
               <Link className="btn btn-ghost" to="/#contact">
-                Contact &amp; fee note
+                Contact &amp; notes
               </Link>
             </div>
           </div>
@@ -77,7 +68,7 @@ export function AccountDetailPage() {
         </div>
       ) : (
         <div className="section">
-          <p className="showcase-lede">Screenshots for this listing are not published yet.</p>
+          <p className="showcase-lede">Screenshots for this showcase are not published yet.</p>
         </div>
       )}
     </main>

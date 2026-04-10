@@ -1,6 +1,28 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+
+const SECTIONS = [
+  { hash: 'listings', label: 'Showcases' },
+  { hash: 'game', label: 'The game' },
+  { hash: 'how', label: 'Reach out' },
+  { hash: 'contact', label: 'Contact', cta: true },
+]
 
 export function Header() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  function goSection(hash) {
+    if (location.pathname !== '/') {
+      navigate({ pathname: '/', hash })
+      return
+    }
+    if (location.hash === `#${hash}`) {
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      return
+    }
+    navigate({ pathname: '/', hash }, { replace: false })
+  }
+
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -11,12 +33,16 @@ export function Header() {
           </span>
         </Link>
         <nav className="nav" aria-label="Primary">
-          <Link to="/#listings">Accounts</Link>
-          <Link to="/#game">The game</Link>
-          <Link to="/#how">How buying works</Link>
-          <Link className="nav-cta" to="/#contact">
-            Contact
-          </Link>
+          {SECTIONS.map(({ hash, label, cta }) => (
+            <button
+              key={hash}
+              type="button"
+              className={cta ? 'nav-link nav-cta' : 'nav-link'}
+              onClick={() => goSection(hash)}
+            >
+              {label}
+            </button>
+          ))}
         </nav>
       </div>
     </header>

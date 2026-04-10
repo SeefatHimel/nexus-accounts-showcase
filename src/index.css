@@ -12,6 +12,7 @@
   --gold: #f0c14b;
   --danger: #ff6b6b;
   --header-h: 4rem;
+  --notice-h: 3.1rem;
   --font-sans: 'Exo 2', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --radius: 12px;
@@ -26,6 +27,15 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Fixed header + notice: anchor targets stay visible */
+#top,
+#listings,
+#game,
+#how,
+#contact {
+  scroll-margin-top: calc(var(--header-h) + var(--notice-h) + 12px);
 }
 
 body {
@@ -53,6 +63,37 @@ a:hover {
 }
 
 /* Header */
+.showcase-notice {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  z-index: 40;
+  min-height: var(--notice-h);
+  padding: 0.55rem 1.25rem;
+  background: rgba(20, 28, 43, 0.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.showcase-notice p {
+  margin: 0 auto;
+  max-width: 1120px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.showcase-notice strong {
+  color: var(--text);
+}
+
+.showcase-notice-link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -112,19 +153,24 @@ a:hover {
   justify-content: flex-end;
 }
 
-.nav a {
+.nav-link {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
-.nav a:hover {
+.nav-link:hover {
   color: var(--text);
 }
 
 .nav-cta {
-  padding: 0.45rem 0.9rem;
+  padding: 0.45rem 0.85rem;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: rgba(94, 234, 255, 0.06);
@@ -134,12 +180,6 @@ a:hover {
 .nav-cta:hover {
   background: rgba(94, 234, 255, 0.12);
   color: #9ff6ff !important;
-}
-
-@media (max-width: 720px) {
-  .nav a:not(.nav-cta) {
-    display: none;
-  }
 }
 
 /* Hero */
@@ -457,7 +497,7 @@ a:hover {
 .card-meta {
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   font-size: 0.8rem;
 }
@@ -471,21 +511,6 @@ a:hover {
 .card-meta dd {
   margin: 0.15rem 0 0;
   font-weight: 600;
-}
-
-.card-meta .price {
-  color: var(--gold);
-  font-family: var(--font-mono);
-}
-
-.price-sub {
-  display: block;
-  margin-top: 0.35rem;
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  line-height: 1.35;
 }
 
 .card-highlights {
@@ -754,7 +779,6 @@ a:hover {
   border-top: 1px solid var(--border);
 }
 
-.nav a,
 .logo {
   text-decoration: none;
 }
@@ -874,20 +898,8 @@ a:hover {
 }
 
 .site-footer p {
-  margin: 0 0 1rem;
+  margin: 0;
   font-size: 0.85rem;
   color: var(--text-muted);
   max-width: 75ch;
-}
-
-.footer-links {
-  margin-bottom: 0 !important;
-}
-
-.footer-links a {
-  color: var(--text-muted);
-}
-
-.footer-links a:hover {
-  color: var(--cyan);
 }

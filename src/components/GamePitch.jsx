@@ -1,14 +1,13 @@
-const FB = 'https://www.facebook.com/Nexus-War-105668681957633'
-
 export function GamePitch() {
   return (
     <section className="section game-pitch" id="game" aria-labelledby="game-title">
       <div className="section-head">
-        <h2 id="game-title">Why players hunt strong accounts</h2>
+        <h2 id="game-title">What kind of game this is</h2>
         <p>
           <em>Nexus War: Civilization</em> (Phantix Games) is a sci-fi strategy MMO on
           Origin Star: four races, alliance warfare, city building, and the Infinity
-          Throne endgame. A head start saves months of grind.
+          Throne endgame. Progression runs deep—that is why people like comparing high-level
+          builds.
         </p>
       </div>
       <ul className="feature-grid">
@@ -30,11 +29,7 @@ export function GamePitch() {
         </li>
       </ul>
       <p className="game-meta">
-        Official community:{' '}
-        <a href={FB} target="_blank" rel="noreferrer">
-          Nexus War on Facebook
-        </a>
-        . This site is an independent seller showcase—not affiliated with the publisher.
+        This site is an independent player showcase—not affiliated with the publisher.
       </p>
     </section>
   )
