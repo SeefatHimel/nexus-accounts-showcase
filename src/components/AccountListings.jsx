@@ -22,8 +22,8 @@ export function AccountListings() {
       <div className="section-head">
         <h2 id="listings-title">Account showcases</h2>
         <p>
-          Each entry is its own page of stats and screenshots—shared for information. Add more in{' '}
-          <code>src/data/accounts.js</code>. Nothing here is an official listing by the game.
+          Every card opens a full page of stats and in-game screenshots. NexusVault is a fan-run showcase—
+          not affiliated with the publisher, and not an official game listing.
         </p>
       </div>
 

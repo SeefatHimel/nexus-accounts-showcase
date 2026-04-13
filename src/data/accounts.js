@@ -247,11 +247,15 @@ const DEATH_F2P_ALT_SHOWCASE = [
   {
     id: 'details',
     title: 'Details',
-    blurb: 'Player info — total power, combat points, and power breakdown.',
+    blurb: 'Player info plus Space Domain progress (through 38-6).',
     images: [
       {
         src: imgDeathF2PAlt('details/player-info.jpg'),
         alt: 'Player info screen with about 393M total power combat points tech military hero T-Frame and battle statistics',
+      },
+      {
+        src: imgDeathF2PAlt('details/space-domain-38-6.jpg'),
+        alt: 'Space Domain stage 38-5 cleanup at 116M recommended power with progression through 38-6 on the timeline and jump to 37-10',
       },
     ],
   },
@@ -317,7 +321,7 @@ export const ACCOUNTS = [
     highlights: [
       'L50 Research Center · Development & Armaments maxed; Battle & Armies advancing',
       'L60 titan · All for one & Titan Δ marches with IX+ and ~50M+ T-Frame power',
-      'Deep bags — components, artifacts in progress, stacked resources & accelerators',
+      'Space Domain through 38-6 · deep bags, components, and stacked resources',
     ],
     image: imgDeathF2PAlt('battlefield/all-for-one-366k.jpg'),
     showcase: DEATH_F2P_ALT_SHOWCASE,
