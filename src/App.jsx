@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/next'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { AccountDetailPage } from './pages/AccountDetailPage'
