@@ -258,7 +258,7 @@ const DEATH_F2P_ALT_SHOWCASE = [
   {
     id: 'inventory',
     title: 'Inventory',
-    blurb: 'Items, resources, and accelerators — stockpiles and speedups.',
+    blurb: 'Items, resources, accelerators, and OTHER — stockpiles, tickets, and materials.',
     images: [
       {
         src: imgDeathF2PAlt('inventory/items-all.jpg'),
@@ -275,6 +275,14 @@ const DEATH_F2P_ALT_SHOWCASE = [
       {
         src: imgDeathF2PAlt('inventory/accelerators-tab.jpg'),
         alt: 'Items ACCELERATORS tab with universal training healing research and construction speedups',
+      },
+      {
+        src: imgDeathF2PAlt('inventory/other-tab.jpg'),
+        alt: 'Items OTHER tab with Selectable Titan skin Chest grid of chests components and alliance chat',
+      },
+      {
+        src: imgDeathF2PAlt('inventory/other-supplies.jpg'),
+        alt: 'Items OTHER tab showing recruitment tickets city items and large stacks of upgrade materials',
       },
     ],
   },
