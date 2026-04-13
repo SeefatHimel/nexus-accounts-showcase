@@ -7,8 +7,9 @@
  *   pairWithNext?: boolean
  * }} ShowcaseSection */
 
-const DEATH_F2P_DIR = 'DeathF2P'
-const DEATH_F2P_ALT_DIR = 'DeathF2pAlt'
+/** Static assets: public/images/accounts/<account-id>/<section>/<file>.jpg */
+const DEATH_F2P_DIR = 'accounts/deathf2p'
+const DEATH_F2P_ALT_DIR = 'accounts/deathf2palt'
 
 /** @param {string} file */
 function imgDeathF2P(file) {
@@ -28,15 +29,15 @@ const DEATH_F2P_SHOWCASE = [
     blurb: 'Level 50 Research Center plus Battle and Armies branch progress.',
     images: [
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-53-30-00_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('research/center-overview.jpg'),
         alt: 'Nexus War research center overview at level 50 with Development, Battle, Armaments, and Armies orbs',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-53-34-35_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('research/battle-branch.jpg'),
         alt: 'Battle research branch stats including Army Enhancement, City Attack, and City Wall percentages',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-53-39-39_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('research/armies-branch.jpg'),
         alt: 'Armies research progress for Titan Sigma, Central Titan, Titan Delta, Titan Omega, and Defense Army',
       },
     ],
@@ -47,27 +48,27 @@ const DEATH_F2P_SHOWCASE = [
     blurb: 'Marching army presets and marches across multiple saved setups.',
     images: [
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-55-33-79_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titans/whale-killer-1.jpg'),
         alt: 'Marching army whale killer with level 60 titan, heroes Animox Floranis Cintra, and 113.6M power',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-55-38-94_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titans/whale-killer-2.jpg'),
         alt: 'Marching army whale killer alternate view with 112.9M power and full troop capacity',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-55-47-77_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titans/f2p-killer.jpg'),
         alt: 'Marching army F2P killer with heroes X-578 Nameless Miryam and 77.7M power',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-55-55-76_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titans/backup.jpg'),
         alt: 'Marching army backup with Medellia Ingrid Bonnie and 73.0M power',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-56-02-30_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titans/gatherer.jpg'),
         alt: 'Marching army gatherer with Djemes Salazaria Khyrus and 50.5M power',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-56-08-71_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titans/defense.jpg'),
         alt: 'Defense army preset with Violet Baeyum Iarhen and 35.0M power',
       },
     ],
@@ -78,15 +79,15 @@ const DEATH_F2P_SHOWCASE = [
     blurb: 'Marching army presets with titan and T-Frame power as shown in the battlefield UI.',
     images: [
       {
-        src: imgDeathF2P('Screenshot_2026-04-13-00-02-47-02_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('battlefield/whale-killer.jpg'),
         alt: 'Marching army whale killer with level 60 titan, heroes Animox Floranis Cintra, IX+ marches, 127.5M power',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-13-00-47-31-92_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('battlefield/f2p-killer.jpg'),
         alt: 'Marching army F2P killer with heroes X-578 Nameless Miryam, level 56 T-Frame, IX+ troops, 85.3M power',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-13-00-41-00-15_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('battlefield/backup.jpg'),
         alt: 'Marching army backup with heroes Medellia Ingrid Bonnie, level 56 T-Frame, IX+ troops, 80.0M power',
       },
     ],
@@ -98,19 +99,19 @@ const DEATH_F2P_SHOWCASE = [
     blurb: 'Per-ship Titan Parts screens (Control Chip, Engine, Deck, Detector, etc.).',
     images: [
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-56-23-64_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titan-parts/f2p-killer.jpg'),
         alt: 'Titan Parts screen for F2P killer ship with Control Chip Command Center Engine Platform Deck Detector levels',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-56-26-40_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titan-parts/whale-killer.jpg'),
         alt: 'Titan Parts for whale killer level 60 with six parts at high star levels',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-56-28-81_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titan-parts/backup-duke.jpg'),
         alt: 'Titan Parts for backup ship DUKE level 40 with six equipped components',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-56-31-19_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('titan-parts/gatherer.jpg'),
         alt: 'Titan Parts for gatherer with partial part slots equipped',
       },
     ],
@@ -122,7 +123,7 @@ const DEATH_F2P_SHOWCASE = [
       'T-Frame components: accessories, reinforce levels, and the full component grid (e.g. Energy Convertor).',
     images: [
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-57-46-49_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('component-storage/energy-convertor.jpg'),
         alt: 'Component Storage with Energy Convertor accessory and reinforce progress grid',
       },
     ],
@@ -133,7 +134,7 @@ const DEATH_F2P_SHOWCASE = [
     blurb: 'Artifact research grid showing progress on key artifacts.',
     images: [
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-53-57-13_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('artifact-lab/research-grid.jpg'),
         alt: 'Artifact Research screen with Graviton Cannon Cerebral Amplifier and other artifact completion percentages',
       },
     ],
@@ -144,11 +145,11 @@ const DEATH_F2P_SHOWCASE = [
     blurb: 'Account profile power breakdown and Space Domain campaign progress.',
     images: [
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-54-39-39_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('details/player-info.jpg'),
         alt: 'Player info screen with total power, combat points, tech, military, hero, and battle statistics',
       },
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-57-24-35_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('details/space-domain-37-6.jpg'),
         alt: 'Space Domain stage 37-6 with 111.5M recommended power and cleanup rewards',
       },
     ],
@@ -159,7 +160,7 @@ const DEATH_F2P_SHOWCASE = [
     blurb: 'Resources tab — stockpiles and key items.',
     images: [
       {
-        src: imgDeathF2P('Screenshot_2026-04-10-01-54-12-75_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2P('inventory/resources-tab.jpg'),
         alt: 'Items resources tab showing stockpiled gold food energy coal metal and Ion Reactor item detail',
       },
     ],
@@ -174,15 +175,15 @@ const DEATH_F2P_ALT_SHOWCASE = [
     blurb: 'Level 50 Research Center — Development and Armaments complete; Battle and Armies in progress.',
     images: [
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-02-35-60_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('research/center-overview.jpg'),
         alt: 'Research Center level 50 with Development Battle Armaments and Armies branch progress orbs',
       },
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-02-39-39_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('research/battle-branch.jpg'),
         alt: 'Battle research branch with Army Enhancement City Attack City Wall Pre-Enhancement and Impregnability stats',
       },
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-02-43-23_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('research/armies-branch.jpg'),
         alt: 'Armies research progress for Titan Sigma Central Titan Titan Delta Titan Omega and Defense Army',
       },
     ],
@@ -193,11 +194,11 @@ const DEATH_F2P_ALT_SHOWCASE = [
     blurb: 'Marching army presets at 330k troops — All for one and Titan Δ (non-battlefield row).',
     images: [
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-00-26-06_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('titans/all-for-one-330k.jpg'),
         alt: 'Marching army All for one with 330k troops 109.7M power IX+ heroes Animox Floranis Cintra',
       },
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-00-47-49_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('titans/titan-delta-330k.jpg'),
         alt: 'Marching army Titan Delta with 330k troops 57.9M power heroes X-578 Miryam Nameless IX tanks',
       },
     ],
@@ -208,11 +209,11 @@ const DEATH_F2P_ALT_SHOWCASE = [
     blurb: 'Battlefield stats at full 366k troop cap — same presets with maxed marching capacity.',
     images: [
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-00-49-02-17_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('battlefield/all-for-one-366k.jpg'),
         alt: 'Battlefield marching army All for one 366k troops level 60 titan heroes Animox Floranis Cintra 119.1M power',
       },
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-00-49-21-06_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('battlefield/titan-delta-366k.jpg'),
         alt: 'Battlefield marching army Titan Delta 366k troops heroes X-578 Miryam Nameless 72.2M power T-Frame 97',
       },
     ],
@@ -223,7 +224,7 @@ const DEATH_F2P_ALT_SHOWCASE = [
     blurb: 'T-Frame components — Force Field Generator accessory, reinforce grid, and inventory.',
     images: [
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-05-32-07_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('component-storage/force-field-generator.jpg'),
         alt: 'Component Storage with Force Field Generator level 9 T-Skill defense and component grid',
       },
     ],
@@ -234,11 +235,11 @@ const DEATH_F2P_ALT_SHOWCASE = [
     blurb: 'Artifact research list and tech tree progress including Graviton Cannon and Shield Substrate.',
     images: [
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-04-12-13_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('artifact-lab/artifact-list.jpg'),
         alt: 'Artifact Research screen with Graviton Cannon in progress Cerebral Amplifier Galactic Resonator percentages',
       },
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-04-18-20_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('artifact-lab/research-tree.jpg'),
         alt: 'Artifact Research hex tree with Shield Substrate active research and node levels out of ten',
       },
     ],
@@ -249,7 +250,7 @@ const DEATH_F2P_ALT_SHOWCASE = [
     blurb: 'Player info — total power, combat points, and power breakdown.',
     images: [
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-03-50-76_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('details/player-info.jpg'),
         alt: 'Player info screen with about 393M total power combat points tech military hero T-Frame and battle statistics',
       },
     ],
@@ -260,15 +261,19 @@ const DEATH_F2P_ALT_SHOWCASE = [
     blurb: 'Items, resources, and accelerators — stockpiles and speedups.',
     images: [
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-05-48-69_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('inventory/items-all.jpg'),
         alt: 'Items inventory ALL tab with resources chests materials and Selectable Titan skin Chest detail',
       },
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-05-53-11_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('inventory/resources-tab.jpg'),
         alt: 'Items RESOURCES tab with Ion Reactor stacks and top-bar resource totals',
       },
       {
-        src: imgDeathF2PAlt('Screenshot_2026-04-13-01-06-03-88_f57a4059871cdc74497da166880ee049.jpg'),
+        src: imgDeathF2PAlt('inventory/resources-packs.jpg'),
+        alt: 'Items RESOURCES tab with stacked gold ore packs and liquid resource vouchers',
+      },
+      {
+        src: imgDeathF2PAlt('inventory/accelerators-tab.jpg'),
         alt: 'Items ACCELERATORS tab with universal training healing research and construction speedups',
       },
     ],
@@ -276,8 +281,8 @@ const DEATH_F2P_ALT_SHOWCASE = [
 ]
 
 /*
-  Add another account: copy an image folder under public/images/, build a SHOWCASE array,
-  then append { id, title, server, power, highlights, badge?, image, showcase }.
+  Add another account: create public/images/accounts/<id>/{research,titans,...}/ with .jpg files,
+  build a SHOWCASE array, then append { id, title, server, power, highlights, badge?, image, showcase }.
   Listing URL: /account/<id>
 */
 
@@ -293,7 +298,7 @@ export const ACCOUNTS = [
       'Space Domain 37-6 · deep resources & components',
     ],
     badge: 'Featured',
-    image: imgDeathF2P('Screenshot_2026-04-13-00-02-47-02_f57a4059871cdc74497da166880ee049.jpg'),
+    image: imgDeathF2P('battlefield/whale-killer.jpg'),
     showcase: DEATH_F2P_SHOWCASE,
   },
   {
@@ -306,7 +311,7 @@ export const ACCOUNTS = [
       'L60 titan · All for one & Titan Δ marches with IX+ and ~50M+ T-Frame power',
       'Deep bags — components, artifacts in progress, stacked resources & accelerators',
     ],
-    image: imgDeathF2PAlt('Screenshot_2026-04-13-00-49-02-17_f57a4059871cdc74497da166880ee049.jpg'),
+    image: imgDeathF2PAlt('battlefield/all-for-one-366k.jpg'),
     showcase: DEATH_F2P_ALT_SHOWCASE,
   },
 ]
