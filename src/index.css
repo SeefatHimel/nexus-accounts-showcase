@@ -17,6 +17,130 @@
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --radius: 12px;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes logo-mark-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 18px rgba(94, 234, 255, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(94, 234, 255, 0.72);
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes header-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes lightbox-backdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightbox-pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-main {
+  animation: page-enter 0.5s var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-main {
+    animation: none;
+  }
+
+  .hero-bg,
+  .logo-mark,
+  .site-header,
+  .showcase-notice,
+  .hero-content > .eyebrow,
+  .hero-content > h1,
+  .hero-content > .hero-lede,
+  .hero-content > .hero-actions,
+  .hero-stats li,
+  .account-card,
+  .feature-grid li,
+  .listings .section-head,
+  .listings .filters,
+  .steps > li,
+  .lightbox,
+  .lightbox-figure,
+  .account-detail-media,
+  .account-detail-title,
+  .account-detail-body {
+    animation: none !important;
+  }
+
+  .account-card:hover,
+  .feature-grid li:hover,
+  .steps > li:hover {
+    transform: none;
+  }
+
+  .account-card:hover .card-media img,
+  .account-detail-media:hover img,
+  .showcase-thumb:hover img,
+  .showcase-thumb:focus-visible img {
+    transform: none;
+  }
+
+  .back-link:hover {
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 *,
@@ -74,6 +198,8 @@ a:hover {
   background: rgba(20, 28, 43, 0.97);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
+  animation: header-enter 0.55s var(--ease-out-expo) both;
+  animation-delay: 0.08s;
 }
 
 .showcase-notice p {
@@ -104,6 +230,7 @@ a:hover {
   background: linear-gradient(180deg, rgba(7, 10, 16, 0.96), rgba(7, 10, 16, 0.82));
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
+  animation: header-enter 0.5s var(--ease-out-expo) both;
 }
 
 .header-inner {
@@ -139,6 +266,7 @@ a:hover {
   border-radius: 2px;
   background: linear-gradient(135deg, var(--cyan), var(--gold));
   box-shadow: 0 0 18px rgba(94, 234, 255, 0.45);
+  animation: logo-mark-pulse 3.5s ease-in-out infinite;
 }
 
 .logo-accent {
@@ -197,6 +325,9 @@ a:hover {
   background-image: var(--hero-img);
   background-size: cover;
   background-position: center;
+  transform-origin: center center;
+  will-change: transform;
+  animation: hero-ken-burns 32s ease-in-out infinite alternate;
 }
 
 .hero-scrim {
@@ -216,6 +347,34 @@ a:hover {
   max-width: 1120px;
   margin: 0 auto;
   width: 100%;
+}
+
+.hero-content > .eyebrow {
+  animation: fade-in-up 0.75s var(--ease-out-expo) both;
+}
+
+.hero-content > h1 {
+  animation: fade-in-up 0.78s var(--ease-out-expo) 0.07s both;
+}
+
+.hero-content > .hero-lede {
+  animation: fade-in-up 0.78s var(--ease-out-expo) 0.13s both;
+}
+
+.hero-content > .hero-actions {
+  animation: fade-in-up 0.78s var(--ease-out-expo) 0.19s both;
+}
+
+.hero-stats li:nth-child(1) {
+  animation: fade-in-up 0.72s var(--ease-out-expo) 0.28s both;
+}
+
+.hero-stats li:nth-child(2) {
+  animation: fade-in-up 0.72s var(--ease-out-expo) 0.34s both;
+}
+
+.hero-stats li:nth-child(3) {
+  animation: fade-in-up 0.72s var(--ease-out-expo) 0.4s both;
 }
 
 .eyebrow {
@@ -263,14 +422,19 @@ a:hover {
   border: 1px solid transparent;
   cursor: pointer;
   transition:
-    background 0.15s,
-    border-color 0.15s,
-    color 0.15s,
-    transform 0.15s;
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.22s var(--ease-out-expo),
+    box-shadow 0.22s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .btn:active {
-  transform: translateY(1px);
+  transform: translateY(0);
 }
 
 .btn-primary {
@@ -282,6 +446,7 @@ a:hover {
 .btn-primary:hover {
   border-color: var(--cyan);
   color: #fff;
+  box-shadow: 0 8px 28px rgba(94, 234, 255, 0.18);
 }
 
 .btn-ghost {
@@ -375,6 +540,33 @@ a:hover {
   border-radius: var(--radius);
   background: var(--bg-panel);
   border: 1px solid var(--border);
+  transition:
+    transform 0.35s var(--ease-out-expo),
+    border-color 0.25s,
+    box-shadow 0.35s ease;
+  animation: fade-in-up 0.65s var(--ease-out-expo) both;
+}
+
+.feature-grid li:nth-child(1) {
+  animation-delay: 0.04s;
+}
+
+.feature-grid li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.feature-grid li:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.feature-grid li:nth-child(4) {
+  animation-delay: 0.22s;
+}
+
+.feature-grid li:hover {
+  transform: translateY(-4px);
+  border-color: rgba(94, 234, 255, 0.22);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
 .feature-grid h3 {
@@ -396,6 +588,14 @@ a:hover {
 }
 
 /* Listings */
+.listings .section-head {
+  animation: fade-in-up 0.65s var(--ease-out-expo) both;
+}
+
+.listings .filters {
+  animation: fade-in-up 0.65s var(--ease-out-expo) 0.06s both;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -451,12 +651,50 @@ a:hover {
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
+  transition:
+    transform 0.4s var(--ease-out-expo),
+    border-color 0.3s ease,
+    box-shadow 0.4s ease;
+  animation: fade-in-up 0.68s var(--ease-out-expo) both;
+}
+
+.account-card:nth-child(1) {
+  animation-delay: 0.04s;
+}
+
+.account-card:nth-child(2) {
+  animation-delay: 0.11s;
+}
+
+.account-card:nth-child(3) {
+  animation-delay: 0.18s;
+}
+
+.account-card:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.account-card:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.account-card:nth-child(6) {
+  animation-delay: 0.39s;
+}
+
+.account-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(94, 234, 255, 0.32);
+  box-shadow:
+    0 28px 64px rgba(0, 0, 0, 0.5),
+    0 0 48px rgba(94, 234, 255, 0.07);
 }
 
 .card-media {
   position: relative;
   aspect-ratio: 3 / 2;
   background: var(--bg-elevated);
+  overflow: hidden;
 }
 
 .card-media img {
@@ -464,6 +702,11 @@ a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.55s var(--ease-out-expo);
+}
+
+.account-card:hover .card-media img {
+  transform: scale(1.04);
 }
 
 .card-badge {
@@ -638,26 +881,38 @@ a:hover {
   display: block;
   aspect-ratio: 9 / 16;
   object-fit: cover;
+  transition: transform 0.4s var(--ease-out-expo);
 }
 
-/* Lightbox */
+.showcase-thumb:hover img,
+.showcase-thumb:focus-visible img {
+  transform: scale(1.03);
+}
+
+/* Lightbox (portaled to body — avoids clipped/fixed positioning from ancestor transforms) */
 .lightbox {
   position: fixed;
   inset: 0;
-  z-index: 200;
+  z-index: 10000;
+  box-sizing: border-box;
   background: rgba(4, 6, 10, 0.92);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 4.25rem 1rem 1.25rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   cursor: zoom-out;
+  animation: lightbox-backdrop 0.28s ease both;
 }
 
 .lightbox-close {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 210;
+  top: max(1rem, env(safe-area-inset-top, 0px));
+  right: max(1rem, env(safe-area-inset-right, 0px));
+  z-index: 10001;
   font: inherit;
   font-weight: 600;
   padding: 0.5rem 1rem;
@@ -673,17 +928,33 @@ a:hover {
   color: var(--cyan);
 }
 
+.lightbox-inner {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: min(100%, calc(100dvh - 5.5rem));
+}
+
 .lightbox-figure {
   margin: 0;
-  max-width: min(520px, 100%);
-  max-height: min(92vh, 100%);
+  width: 100%;
+  max-width: min(520px, calc(100vw - 2rem));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   cursor: default;
+  animation: lightbox-pop 0.35s var(--ease-out-expo) both;
 }
 
 .lightbox-figure img {
-  width: 100%;
+  display: block;
+  width: auto;
   height: auto;
-  max-height: min(85vh, 880px);
+  max-width: 100%;
+  max-height: min(78dvh, calc(100dvh - 11rem));
   object-fit: contain;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -695,8 +966,10 @@ a:hover {
   font-size: 0.8rem;
   color: var(--text-muted);
   line-height: 1.4;
-  max-height: 4.5rem;
+  max-height: min(5.5rem, 20dvh);
   overflow: auto;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 /* Account detail page */
@@ -711,10 +984,12 @@ a:hover {
   font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
+  transition: color 0.2s ease, transform 0.25s var(--ease-out-expo);
 }
 
 .back-link:hover {
   color: var(--cyan);
+  transform: translateX(-3px);
 }
 
 .account-detail-summary {
@@ -735,6 +1010,7 @@ a:hover {
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-panel);
+  animation: fade-in-up 0.7s var(--ease-out-expo) both;
 }
 
 .account-detail-media img {
@@ -743,12 +1019,22 @@ a:hover {
   display: block;
   aspect-ratio: 3 / 2;
   object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.account-detail-media:hover img {
+  transform: scale(1.02);
 }
 
 .account-detail-title {
   margin: 0 0 1rem;
   font-size: clamp(1.35rem, 3vw, 1.85rem);
   line-height: 1.2;
+  animation: fade-in-up 0.65s var(--ease-out-expo) 0.08s both;
+}
+
+.account-detail-body {
+  animation: fade-in-up 0.65s var(--ease-out-expo) 0.14s both;
 }
 
 .account-detail-meta {
@@ -806,6 +1092,27 @@ a:hover {
   border-radius: var(--radius);
   background: var(--bg-panel);
   border: 1px solid var(--border);
+  transition:
+    border-color 0.25s ease,
+    transform 0.35s var(--ease-out-expo);
+  animation: fade-in-up 0.62s var(--ease-out-expo) both;
+}
+
+.steps > li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.steps > li:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.steps > li:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.steps > li:hover {
+  border-color: rgba(94, 234, 255, 0.2);
+  transform: translateX(4px);
 }
 
 .step-num {

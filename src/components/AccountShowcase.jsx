@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 /**
  * @param {{
@@ -62,23 +63,35 @@ export function AccountShowcase({ accountTitle, anchorId, sections }) {
 
       {blocks}
 
-      {lightbox ? (
-        <div
-          className="lightbox"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Screenshot preview"
-          onClick={close}
-        >
-          <button type="button" className="lightbox-close" onClick={close}>
-            Close
-          </button>
-          <figure className="lightbox-figure" onClick={(e) => e.stopPropagation()}>
-            <img src={lightbox.src} alt={lightbox.alt} />
-            {lightbox.alt ? <figcaption>{lightbox.alt}</figcaption> : null}
-          </figure>
-        </div>
-      ) : null}
+      {lightbox
+        ? createPortal(
+            <div
+              className="lightbox"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Screenshot preview"
+              onClick={close}
+            >
+              <button
+                type="button"
+                className="lightbox-close"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  close()
+                }}
+              >
+                Close
+              </button>
+              <div className="lightbox-inner">
+                <figure className="lightbox-figure" onClick={(e) => e.stopPropagation()}>
+                  <img src={lightbox.src} alt={lightbox.alt} />
+                  {lightbox.alt ? <figcaption>{lightbox.alt}</figcaption> : null}
+                </figure>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </div>
   )
 }
