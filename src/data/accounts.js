@@ -67,6 +67,25 @@ const DEATH_F2P_SHOWCASE = [
     ],
   },
   {
+    id: 'battlefield',
+    title: 'Battlefield',
+    blurb: 'Marching army presets with titan and T-Frame power as shown in the battlefield UI.',
+    images: [
+      {
+        src: img('Screenshot_2026-04-13-00-02-47-02_f57a4059871cdc74497da166880ee049.jpg'),
+        alt: 'Marching army whale killer with level 60 titan, heroes Animox Floranis Cintra, IX+ marches, 127.5M power',
+      },
+      {
+        src: img('Screenshot_2026-04-13-00-47-31-92_f57a4059871cdc74497da166880ee049.jpg'),
+        alt: 'Marching army F2P killer with heroes X-578 Nameless Miryam, level 56 T-Frame, IX+ troops, 85.3M power',
+      },
+      {
+        src: img('Screenshot_2026-04-13-00-41-00-15_f57a4059871cdc74497da166880ee049.jpg'),
+        alt: 'Marching army backup with heroes Medellia Ingrid Bonnie, level 56 T-Frame, IX+ troops, 80.0M power',
+      },
+    ],
+  },
+  {
     id: 'titan-parts',
     title: 'Titan parts',
     pairWithNext: true,
