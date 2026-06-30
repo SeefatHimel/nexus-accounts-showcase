@@ -22,6 +22,8 @@ function imgDeathF2PAlt(file) {
 }
 
 const DEFAULT_IMAGE_UPDATED_AT = 'March 2026'
+const DEATH_F2P_UPDATED_AT = 'June 30, 2026'
+const DEATH_F2P_UPDATED_AT_JULY = 'July 1, 2026'
 
 /**
  * @param {ShowcaseSection[]} sections
@@ -60,51 +62,67 @@ const DEATH_F2P_SHOWCASE_RAW = [
   },
   {
     id: 'titans',
-    title: 'Titans',
-    blurb: 'Marching army presets and marches across multiple saved setups.',
+    title: 'Season titans',
+    blurb: 'Season marching army screens at the 330k troop cap.',
     images: [
       {
-        src: imgDeathF2P('titans/whale-killer-1.jpg'),
-        alt: 'Marching army whale killer with level 60 titan, heroes Animox Floranis Cintra, and 113.6M power',
+        src: imgDeathF2P('titans/whale-killer-330k-117m-a.jpg'),
+        alt: 'Season marching army whale killer with 330k troops, level 60 titan, heroes Animox Floranis Cintra, and 117.4M power',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
-        src: imgDeathF2P('titans/whale-killer-2.jpg'),
-        alt: 'Marching army whale killer alternate view with 112.9M power and full troop capacity',
+        src: imgDeathF2P('titans/whale-killer-330k-160m.jpg'),
+        alt: 'Season marching army whale killer with 330k troops, 160.8M power, and heroes Animox Floranis Cintra',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
-        src: imgDeathF2P('titans/f2p-killer.jpg'),
-        alt: 'Marching army F2P killer with heroes X-578 Nameless Miryam and 77.7M power',
-      },
-      {
-        src: imgDeathF2P('titans/backup.jpg'),
-        alt: 'Marching army backup with Medellia Ingrid Bonnie and 73.0M power',
-      },
-      {
-        src: imgDeathF2P('titans/gatherer.jpg'),
-        alt: 'Marching army gatherer with Djemes Salazaria Khyrus and 50.5M power',
-      },
-      {
-        src: imgDeathF2P('titans/defense.jpg'),
-        alt: 'Defense army preset with Violet Baeyum Iarhen and 35.0M power',
+        src: imgDeathF2P('titans/f2p-killer-330k.jpg'),
+        alt: 'Season marching army F2P killer with 330k troops, heroes X-578 Miryam Samuel, and 64.0M power',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
     ],
   },
   {
     id: 'battlefield',
-    title: 'Battlefield',
-    blurb: 'Marching army presets with titan and T-Frame power as shown in the battlefield UI.',
+    title: 'Battlefield titans',
+    blurb: 'Battlefield marching army screens at the 378k troop cap.',
     images: [
       {
-        src: imgDeathF2P('battlefield/whale-killer.jpg'),
-        alt: 'Marching army whale killer with level 60 titan, heroes Animox Floranis Cintra, IX+ marches, 127.5M power',
+        src: imgDeathF2P('battlefield/whale-killer-378k-129m.jpg'),
+        alt: 'Battlefield marching army whale killer with 378k troops, level 60 titan, heroes Animox Floranis Cintra, and 129.6M power',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
-        src: imgDeathF2P('battlefield/f2p-killer.jpg'),
-        alt: 'Marching army F2P killer with heroes X-578 Nameless Miryam, level 56 T-Frame, IX+ troops, 85.3M power',
+        src: imgDeathF2P('battlefield/whale-killer-378k-182m.jpg'),
+        alt: 'Battlefield marching army whale killer with 378k troops, 182.2M power, and upgraded X and IX plus squads',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
-        src: imgDeathF2P('battlefield/backup.jpg'),
-        alt: 'Marching army backup with heroes Medellia Ingrid Bonnie, level 56 T-Frame, IX+ troops, 80.0M power',
+        src: imgDeathF2P('battlefield/whale-killer-378k-187m.jpg'),
+        alt: 'Battlefield marching army whale killer with 377.5k out of 378k troops, 187.5M power, and 475 march speed stat',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
+      },
+      {
+        src: imgDeathF2P('battlefield/f2p-killer-378k.jpg'),
+        alt: 'Battlefield marching army F2P killer with 378k troops, heroes X-578 Miryam Samuel, and 83.2M power',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
+      },
+    ],
+  },
+  {
+    id: 'defense-titans',
+    title: 'Defense titan',
+    blurb: 'Defense Army marching screens with higher defense troop caps outside season and battlefield.',
+    images: [
+      {
+        src: imgDeathF2P('defense-titans/defense-army-423k.jpg'),
+        alt: 'Defense Army marching screen with 423k troops, heroes Medellia Ingrid Bonnie, and 63.3M power',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
+      },
+      {
+        src: imgDeathF2P('defense-titans/defense-army-471k.jpg'),
+        alt: 'Defense Army marching screen with 471k troops, heroes Medellia Ingrid Bonnie, and 79.5M power',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
     ],
   },
@@ -116,19 +134,18 @@ const DEATH_F2P_SHOWCASE_RAW = [
     images: [
       {
         src: imgDeathF2P('titan-parts/f2p-killer.jpg'),
-        alt: 'Titan Parts screen for F2P killer ship with Control Chip Command Center Engine Platform Deck Detector levels',
+        alt: 'Titan Parts screen for F2P killer ship at level 59 with level 60 parts on most slots and a level 59 command center',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
         src: imgDeathF2P('titan-parts/whale-killer.jpg'),
-        alt: 'Titan Parts for whale killer level 60 with six parts at high star levels',
+        alt: 'Titan Parts for whale killer level 60 with highly starred level 60 parts across all six slots',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
-        src: imgDeathF2P('titan-parts/backup-duke.jpg'),
-        alt: 'Titan Parts for backup ship DUKE level 40 with six equipped components',
-      },
-      {
-        src: imgDeathF2P('titan-parts/gatherer.jpg'),
-        alt: 'Titan Parts for gatherer with partial part slots equipped',
+        src: imgDeathF2P('titan-parts/defense-army.jpg'),
+        alt: 'Titan Parts for Defense Army level 40 with parts around level 40 to 41 across all six slots',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
     ],
   },
@@ -141,6 +158,40 @@ const DEATH_F2P_SHOWCASE_RAW = [
       {
         src: imgDeathF2P('component-storage/energy-convertor.jpg'),
         alt: 'Component Storage with Energy Convertor accessory and reinforce progress grid',
+      },
+    ],
+  },
+  {
+    id: 'daemons',
+    title: 'Daemons',
+    blurb: 'T-Frame Workshop daemon synthesis progress across multiple rarity and level ranges.',
+    images: [
+      {
+        src: imgDeathF2P('daemons/daemon-synthesis-low.jpg'),
+        alt: 'T-Frame Workshop daemon synthesis screen with lower-level daemon materials around levels 7 to 9',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('daemons/daemon-synthesis-mid.jpg'),
+        alt: 'T-Frame Workshop daemon synthesis screen with mixed daemon materials around levels 9 to 12',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('daemons/daemon-synthesis-high.jpg'),
+        alt: 'T-Frame Workshop daemon synthesis screen with higher-level daemon materials around levels 13 to 17',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+    ],
+  },
+  {
+    id: 'imprint-helmet',
+    title: 'Imprint helmet',
+    blurb: 'Imprint Helmet activation and hero pairing setup.',
+    images: [
+      {
+        src: imgDeathF2P('imprint-helmet/floranis-magni.jpg'),
+        alt: 'Imprint Helmet activated screen showing Floranis linked with Magni and equipped skill nodes',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
       },
     ],
   },
@@ -162,22 +213,65 @@ const DEATH_F2P_SHOWCASE_RAW = [
     images: [
       {
         src: imgDeathF2P('details/player-info.jpg'),
-        alt: 'Player info screen with total power, combat points, tech, military, hero, and battle statistics',
+        alt: 'Player info screen with about 495M total power, combat points, tech, military, hero, T-Frame, and battle statistics',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
-        src: imgDeathF2P('details/space-domain-37-6.jpg'),
-        alt: 'Space Domain stage 37-6 with 111.5M recommended power and cleanup rewards',
+        src: imgDeathF2P('details/space-domain-41-10.jpg'),
+        alt: 'Space Domain stage 41-10 cleanup with 133.5M recommended power and progression visible through 42-2',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
       },
     ],
   },
   {
     id: 'inventory',
     title: 'Inventory',
-    blurb: 'Resources tab — stockpiles and key items.',
+    blurb: 'Resources, accelerators, buffs, and other items — stockpiles, skin chests, and utility consumables.',
     images: [
       {
-        src: imgDeathF2P('inventory/resources-tab.jpg'),
-        alt: 'Items resources tab showing stockpiled gold food energy coal metal and Ion Reactor item detail',
+        src: imgDeathF2P('inventory/resources-ion-reactor-overview.jpg'),
+        alt: 'Items resources tab showing Ion Reactor selected with stockpiled reactors, resource packs, and crafting materials',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('inventory/resources-ion-reactor-stockpiles.jpg'),
+        alt: 'Items resources tab with Ion Reactor selected and large stacks of gold, peaches, batteries, and volcanic materials',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('inventory/accelerators-general.jpg'),
+        alt: 'Items accelerators tab with general, building, research, and other speedups in large quantities',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('inventory/buff-force-field.jpg'),
+        alt: 'Items buff tab with Force Field 8 Hours selected and a grid of combat, scout, and city utility buffs',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('inventory/other-skin-chest-utility.jpg'),
+        alt: 'Items other tab with Selectable Titan skin Chest selected and utility items such as chests, vouchers, and event consumables',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('inventory/other-skin-chest-materials.jpg'),
+        alt: 'Items other tab with Selectable Titan skin Chest selected and assorted materials, boxes, rings, and crafting items',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('inventory/other-skin-chest-heroes.jpg'),
+        alt: 'Items other tab with Selectable Titan skin Chest selected and a collection of hero and titan portrait tokens',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('inventory/other-skin-chest-exp.jpg'),
+        alt: 'Items other tab with Selectable Titan skin Chest selected and experience items, burgers, and assorted premium consumables',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
+      },
+      {
+        src: imgDeathF2P('inventory/other-skin-chest-currency.jpg'),
+        alt: 'Items other tab with Selectable Titan skin Chest selected and currencies, crystals, atoms, and premium tickets',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY,
       },
     ],
   },
@@ -323,14 +417,14 @@ export const ACCOUNTS = [
     id: 'deathf2p',
     title: 'DeathF2P',
     server: 'S-40',
-    power: '~485M',
+    power: '~495M',
     highlights: [
       'L50 Research Center · strong Battle & Armies branches',
       'Multiple IX+ marches · L60 whale-killer + upgraded Titan parts',
-      'Space Domain 37-6 · deep resources & components',
+      'Space Domain 41-10 · deep resources & components',
     ],
     badge: 'Featured',
-    image: imgDeathF2P('battlefield/whale-killer.jpg'),
+    image: imgDeathF2P('battlefield/whale-killer-378k-187m.jpg'),
     imageUpdatedAt: DEFAULT_IMAGE_UPDATED_AT,
     showcase: DEATH_F2P_SHOWCASE,
   },
