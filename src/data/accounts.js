@@ -61,50 +61,50 @@ const DEATH_F2P_SHOWCASE_RAW = [
     ],
   },
   {
-    id: 'titans',
-    title: 'Season titans',
-    blurb: 'Season marching army screens at the 330k troop cap.',
+    id: 'tx-t10-titans',
+    title: 'TX / T10 titans',
+    blurb: 'Highest-tier titan marches at roughly 150M+ power.',
     images: [
       {
-        src: imgDeathF2P('titans/whale-killer-330k-117m-a.jpg'),
-        alt: 'Season marching army whale killer with 330k troops, level 60 titan, heroes Animox Floranis Cintra, and 117.4M power',
-        lastUpdated: DEATH_F2P_UPDATED_AT,
-      },
-      {
         src: imgDeathF2P('titans/whale-killer-330k-160m.jpg'),
-        alt: 'Season marching army whale killer with 330k troops, 160.8M power, and heroes Animox Floranis Cintra',
+        alt: 'TX or T10 whale killer march with 330k troops, 160.8M power, and heroes Animox Floranis Cintra',
         lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
-        src: imgDeathF2P('titans/f2p-killer-330k.jpg'),
-        alt: 'Season marching army F2P killer with 330k troops, heroes X-578 Miryam Samuel, and 64.0M power',
+        src: imgDeathF2P('battlefield/whale-killer-378k-182m.jpg'),
+        alt: 'TX or T10 whale killer battlefield march with 378k troops and 182.2M power',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
+      },
+      {
+        src: imgDeathF2P('battlefield/whale-killer-378k-187m.jpg'),
+        alt: 'TX or T10 whale killer battlefield march with 377.5k out of 378k troops, 187.5M power, and 475 march speed stat',
         lastUpdated: DEATH_F2P_UPDATED_AT,
       },
     ],
   },
   {
-    id: 'battlefield',
-    title: 'Battlefield titans',
-    blurb: 'Battlefield marching army screens at the 378k troop cap.',
+    id: 't9-plus-titans',
+    title: 'T9+ titans',
+    blurb: 'Strong titan marches below the 150M range, including season and battlefield screens.',
     images: [
       {
+        src: imgDeathF2P('titans/whale-killer-330k-117m-a.jpg'),
+        alt: 'T9 plus whale killer march with 330k troops, level 60 titan, heroes Animox Floranis Cintra, and 117.4M power',
+        lastUpdated: DEATH_F2P_UPDATED_AT,
+      },
+      {
         src: imgDeathF2P('battlefield/whale-killer-378k-129m.jpg'),
-        alt: 'Battlefield marching army whale killer with 378k troops, level 60 titan, heroes Animox Floranis Cintra, and 129.6M power',
+        alt: 'T9 plus whale killer battlefield march with 378k troops and 129.6M power',
         lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
-        src: imgDeathF2P('battlefield/whale-killer-378k-182m.jpg'),
-        alt: 'Battlefield marching army whale killer with 378k troops, 182.2M power, and upgraded X and IX plus squads',
-        lastUpdated: DEATH_F2P_UPDATED_AT,
-      },
-      {
-        src: imgDeathF2P('battlefield/whale-killer-378k-187m.jpg'),
-        alt: 'Battlefield marching army whale killer with 377.5k out of 378k troops, 187.5M power, and 475 march speed stat',
+        src: imgDeathF2P('titans/f2p-killer-330k.jpg'),
+        alt: 'T9 plus F2P killer season march with 330k troops, heroes X-578 Miryam Samuel, and 64.0M power',
         lastUpdated: DEATH_F2P_UPDATED_AT,
       },
       {
         src: imgDeathF2P('battlefield/f2p-killer-378k.jpg'),
-        alt: 'Battlefield marching army F2P killer with 378k troops, heroes X-578 Miryam Samuel, and 83.2M power',
+        alt: 'T9 plus F2P killer battlefield march with 378k troops, heroes X-578 Miryam Samuel, and 83.2M power',
         lastUpdated: DEATH_F2P_UPDATED_AT,
       },
     ],
