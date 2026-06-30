@@ -35,6 +35,10 @@ export function AccountDetailPage() {
                 <dt>Power</dt>
                 <dd>{account.power}</dd>
               </div>
+              <div>
+                <dt>Updated</dt>
+                <dd>{account.imageUpdatedAt || 'March 2026'}</dd>
+              </div>
             </dl>
             <ul className="card-highlights">
               {account.highlights.map((h) => (

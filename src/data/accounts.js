@@ -1,4 +1,4 @@
-/** @typedef {{ src: string; alt: string }} ShowcaseImage */
+/** @typedef {{ src: string; alt: string; lastUpdated?: string }} ShowcaseImage */
 /** @typedef {{
  *   id: string
  *   title: string
@@ -21,8 +21,24 @@ function imgDeathF2PAlt(file) {
   return `/images/${DEATH_F2P_ALT_DIR}/${file}`
 }
 
+const DEFAULT_IMAGE_UPDATED_AT = 'March 2026'
+
+/**
+ * @param {ShowcaseSection[]} sections
+ * @returns {ShowcaseSection[]}
+ */
+function withDefaultShowcaseDates(sections) {
+  return sections.map((section) => ({
+    ...section,
+    images: section.images.map((shot) => ({
+      lastUpdated: DEFAULT_IMAGE_UPDATED_AT,
+      ...shot,
+    })),
+  }))
+}
+
 /** @type {ShowcaseSection[]} */
-const DEATH_F2P_SHOWCASE = [
+const DEATH_F2P_SHOWCASE_RAW = [
   {
     id: 'research',
     title: 'Research',
@@ -167,8 +183,10 @@ const DEATH_F2P_SHOWCASE = [
   },
 ]
 
+const DEATH_F2P_SHOWCASE = withDefaultShowcaseDates(DEATH_F2P_SHOWCASE_RAW)
+
 /** @type {ShowcaseSection[]} */
-const DEATH_F2P_ALT_SHOWCASE = [
+const DEATH_F2P_ALT_SHOWCASE_RAW = [
   {
     id: 'research',
     title: 'Research',
@@ -292,6 +310,8 @@ const DEATH_F2P_ALT_SHOWCASE = [
   },
 ]
 
+const DEATH_F2P_ALT_SHOWCASE = withDefaultShowcaseDates(DEATH_F2P_ALT_SHOWCASE_RAW)
+
 /*
   Add another account: create public/images/accounts/<id>/{research,titans,...}/ with .jpg files,
   build a SHOWCASE array, then append { id, title, server, power, highlights, badge?, image, showcase }.
@@ -311,6 +331,7 @@ export const ACCOUNTS = [
     ],
     badge: 'Featured',
     image: imgDeathF2P('battlefield/whale-killer.jpg'),
+    imageUpdatedAt: DEFAULT_IMAGE_UPDATED_AT,
     showcase: DEATH_F2P_SHOWCASE,
   },
   {
@@ -324,6 +345,7 @@ export const ACCOUNTS = [
       'Space Domain through 38-6 · deep bags, components, and stacked resources',
     ],
     image: imgDeathF2PAlt('battlefield/all-for-one-366k.jpg'),
+    imageUpdatedAt: DEFAULT_IMAGE_UPDATED_AT,
     showcase: DEATH_F2P_ALT_SHOWCASE,
   },
 ]

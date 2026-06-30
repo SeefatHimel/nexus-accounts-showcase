@@ -9,7 +9,7 @@ import { createPortal } from 'react-dom'
  *     id: string
  *     title: string
  *     blurb?: string
- *     images: Array<{ src: string; alt: string }>
+ *     images: Array<{ src: string; alt: string; lastUpdated?: string }>
  *     pairWithNext?: boolean
  *   }>
  * }} props
@@ -86,6 +86,7 @@ export function AccountShowcase({ accountTitle, anchorId, sections }) {
                 <figure className="lightbox-figure" onClick={(e) => e.stopPropagation()}>
                   <img src={lightbox.src} alt={lightbox.alt} />
                   {lightbox.alt ? <figcaption>{lightbox.alt}</figcaption> : null}
+                  {lightbox.lastUpdated ? <p className="lightbox-updated">Updated {lightbox.lastUpdated}</p> : null}
                 </figure>
               </div>
             </div>,
@@ -120,7 +121,10 @@ function renderShowcaseSection(section, anchorId, setLightbox, inPair, reactKey)
             className="showcase-thumb"
             onClick={() => setLightbox(shot)}
           >
-            <img src={shot.src} alt={shot.alt} loading="lazy" width={400} height={711} />
+            <figure className="showcase-thumb-figure">
+              <img src={shot.src} alt={shot.alt} loading="lazy" width={400} height={711} />
+              {shot.lastUpdated ? <figcaption>Updated {shot.lastUpdated}</figcaption> : null}
+            </figure>
           </button>
         ))}
       </div>
