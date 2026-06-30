@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 /**
  * @param {{
@@ -8,7 +9,7 @@ import { useCallback, useEffect, useState } from 'react'
  *     id: string
  *     title: string
  *     blurb?: string
- *     images: Array<{ src: string; alt: string }>
+ *     images: Array<{ src: string; alt: string; lastUpdated?: string }>
  *     pairWithNext?: boolean
  *   }>
  * }} props
@@ -62,23 +63,36 @@ export function AccountShowcase({ accountTitle, anchorId, sections }) {
 
       {blocks}
 
-      {lightbox ? (
-        <div
-          className="lightbox"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Screenshot preview"
-          onClick={close}
-        >
-          <button type="button" className="lightbox-close" onClick={close}>
-            Close
-          </button>
-          <figure className="lightbox-figure" onClick={(e) => e.stopPropagation()}>
-            <img src={lightbox.src} alt={lightbox.alt} />
-            {lightbox.alt ? <figcaption>{lightbox.alt}</figcaption> : null}
-          </figure>
-        </div>
-      ) : null}
+      {lightbox
+        ? createPortal(
+            <div
+              className="lightbox"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Screenshot preview"
+              onClick={close}
+            >
+              <button
+                type="button"
+                className="lightbox-close"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  close()
+                }}
+              >
+                Close
+              </button>
+              <div className="lightbox-inner">
+                <figure className="lightbox-figure" onClick={(e) => e.stopPropagation()}>
+                  <img src={lightbox.src} alt={lightbox.alt} />
+                  {lightbox.alt ? <figcaption>{lightbox.alt}</figcaption> : null}
+                  {lightbox.lastUpdated ? <p className="lightbox-updated">Updated {lightbox.lastUpdated}</p> : null}
+                </figure>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </div>
   )
 }
@@ -107,7 +121,10 @@ function renderShowcaseSection(section, anchorId, setLightbox, inPair, reactKey)
             className="showcase-thumb"
             onClick={() => setLightbox(shot)}
           >
-            <img src={shot.src} alt={shot.alt} loading="lazy" width={400} height={711} />
+            <figure className="showcase-thumb-figure">
+              <img src={shot.src} alt={shot.alt} loading="lazy" width={400} height={711} />
+              {shot.lastUpdated ? <figcaption>Updated {shot.lastUpdated}</figcaption> : null}
+            </figure>
           </button>
         ))}
       </div>
