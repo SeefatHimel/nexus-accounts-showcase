@@ -306,11 +306,13 @@ const DEATH_F2P_ALT_SHOWCASE_RAW = [
       },
       {
         src: imgDeathF2PAlt('research/battle-branch.jpg'),
-        alt: 'Battle research branch with Army Enhancement City Attack City Wall Pre-Enhancement and Impregnability stats',
+        alt: 'Battle research overview with Army Enhancement 87.1 percent, City Attack 89.1 percent, City Wall 98.5 percent, Pre-Enhancement 59.1 percent, and Impregnability 36.2 percent',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
       },
       {
         src: imgDeathF2PAlt('research/armies-branch.jpg'),
-        alt: 'Armies research progress for Titan Sigma Central Titan Titan Delta Titan Omega and Defense Army',
+        alt: 'Armies research overview showing Titan Sigma 78.2 percent, Central Titan 61.9 percent, Titan Delta 55.4 percent, Titan Omega 36.9 percent, and Defense Army 100.0 percent',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
       },
     ],
   },
@@ -321,11 +323,25 @@ const DEATH_F2P_ALT_SHOWCASE_RAW = [
     images: [
       {
         src: imgDeathF2PAlt('titans/all-for-one-330k.jpg'),
-        alt: 'Marching army All for one with 330k troops 109.7M power IX+ heroes Animox Floranis Cintra',
+        alt: 'Marching army All for one with 330k troops, about 112.9M power, heroes Animox Floranis Cintra, and IX plus squads',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
       },
       {
         src: imgDeathF2PAlt('titans/titan-delta-330k.jpg'),
-        alt: 'Marching army Titan Delta with 330k troops 57.9M power heroes X-578 Miryam Nameless IX tanks',
+        alt: 'Marching army Titan Delta with 330k troops, about 45.0M power, heroes X-578 Magni Miryam, and IX squads',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
+      },
+    ],
+  },
+  {
+    id: 'defense-titans',
+    title: 'Defense titan',
+    blurb: 'Defense Army marching screen for the alt account.',
+    images: [
+      {
+        src: imgDeathF2PAlt('defense-titans/defense-army.jpg'),
+        alt: 'Defense Army marching screen with about 37.0M power, 459k troops loaded, and heroes Baka-Ri Saphiya Khyrus',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
       },
     ],
   },
