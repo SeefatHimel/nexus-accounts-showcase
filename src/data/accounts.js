@@ -24,6 +24,7 @@ function imgDeathF2PAlt(file) {
 const DEFAULT_IMAGE_UPDATED_AT = 'March 2026'
 const DEATH_F2P_UPDATED_AT = 'June 30, 2026'
 const DEATH_F2P_UPDATED_AT_JULY = 'July 1, 2026'
+const DEATH_F2P_UPDATED_AT_JULY2 = 'July 2, 2026'
 
 /**
  * @param {ShowcaseSection[]} sections
@@ -52,11 +53,13 @@ const DEATH_F2P_SHOWCASE_RAW = [
       },
       {
         src: imgDeathF2P('research/battle-branch.jpg'),
-        alt: 'Battle research branch stats including Army Enhancement, City Attack, and City Wall percentages',
+        alt: 'Battle research overview with Army Enhancement 100.0 percent, City Attack 95.4 percent, City Wall 100.0 percent, Pre-Enhancement 80.0 percent, and Impregnability 49.0 percent',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
       },
       {
         src: imgDeathF2P('research/armies-branch.jpg'),
-        alt: 'Armies research progress for Titan Sigma, Central Titan, Titan Delta, Titan Omega, and Defense Army',
+        alt: 'Armies research overview showing Titan Sigma 92.3 percent, Central Titan 75.0 percent, Titan Delta 55.4 percent, Titan Omega 40.2 percent, and Defense Army 100.0 percent',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
       },
     ],
   },
@@ -198,11 +201,22 @@ const DEATH_F2P_SHOWCASE_RAW = [
   {
     id: 'artifact-lab',
     title: 'Artifact Lab',
-    blurb: 'Artifact research grid showing progress on key artifacts.',
+    blurb: 'Artifact research progress across the main overview and deeper node trees.',
     images: [
       {
-        src: imgDeathF2P('artifact-lab/research-grid.jpg'),
-        alt: 'Artifact Research screen with Graviton Cannon Cerebral Amplifier and other artifact completion percentages',
+        src: imgDeathF2P('artifact-lab/artifact-overview.jpg'),
+        alt: 'Artifact Research overview with Graviton Cannon at 74 percent, Cerebral Amplifier at 100 percent, Galactic Resonator at 31 percent, and several lower-progress artifacts',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
+      },
+      {
+        src: imgDeathF2P('artifact-lab/offense-tree.jpg'),
+        alt: 'Artifact Research offense-oriented node tree with multiple purple nodes ranging from 1 out of 10 to 6 out of 10',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
+      },
+      {
+        src: imgDeathF2P('artifact-lab/support-tree.jpg'),
+        alt: 'Artifact Research support-oriented node tree with top nodes at 9 out of 10, middle nodes at 10 out of 10, and lower nodes between 5 out of 10 and 6 out of 10',
+        lastUpdated: DEATH_F2P_UPDATED_AT_JULY2,
       },
     ],
   },
